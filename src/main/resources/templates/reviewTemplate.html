@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title th:text="${reviewModel.reviewTitle}"></title>
+    <link rel="stylesheet" type="text/css" href="./css/reviewstyle.css">
+</head>
+
+<body>
+<div class="fixed-header">
+    <header>
+        <h1>CLE WANDERLUST</h1>
+        <nav>
+            <p class="nav"> <a href="/reviews">Home</a> | About | Contact</p>
+        </nav>
+    </header>
+
+
+</div>
+<div class="container">
+
+    <header>
+        <h1> CLE Wanderlust: Cleveland's Hidden Gems </h1>
+    </header>
+
+    <main>
+        <img th:src="${reviewModel.imageUrl}">
+        <h2 th:text="${reviewModel.reviewTitle}"></h2>
+        <p><small>Publication Date: June 15, 2020 | Author: Chris Taylor</small></p>
+        <div class="content">
+            <p th:text="${reviewModel.reviewContent}"></p>
+        </div>
+        <p th:text="${reviewModel.reviewCategory}"></p>
+    </main>
+</div>
+
+<div class="fixed-footer">
+    <small>&copy Chris Taylor 2020</small>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="/static/css/reviewstyle.css">
+    <title>Review Categories</title>
+</head>
+
+<body>
+<div class="container">
+<h1>CLE Gem Review Categories</h1>
+<ul>
+<li th:each="categoryName:${categories}">
+    <a th:href="@{'/categories/'+ ${categoryName.categoryName}}" th:text="${categoryName.categoryName}">CategoryName Here</a>
+    </ul>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+* {
+    font-family: sans-serif;
+    line-height: 1.618em;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+h1 {
+    font-family: "Arial Narrow", sans-serif;
+    font-weight: lighter;
+}
+
+h2 {
+    font-family: "Arial Narrow", sans-serif;
+    text-align: left;
+    border-bottom-color: black;
+
+}
+
+nav {
+    background-color: black;
+    color: lightgrey;
+    font-family: "Arial Narrow", sans-serif;
+}
+.nav {
+    text-align: center;
+    color: lightgrey;
+}
+body {
+    background-image: url(../images/suspension-bridge.jpg);
+    width: 100%;
+    height: auto;
+    background-position: top, center;
+    background-repeat: repeat-y;
+    background-color: black;
+}
+
+.container {
+    padding: 2rem;
+    background-color: lightgrey;
+    margin: 6rem auto 3rem auto;
+    max-width: 60%;
+    width: 90%;
+}
+.intro {
+    padding: 2rem 2rem 0rem 2rem;
+    text-align: left;
+}
+main {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.reviews {
+    display: grid;
+}
+
+
+img {
+    border-radius: 25%;
+    padding: 1rem;
+}
+
+.fixed-header,
+.fixed-footer {
+    display: grid;
+    width: 100%;
+    position: fixed;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.fixed-header {
+    top: 0;
+    background-image: url(../images/suspension-bridge.jpg);
+    width: 100%;
+    height: 4rem;
+    background-position: top, center;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: lightgrey;
+}
+
+.fixed-footer {
+    bottom: 0;
+    background-position: center;
+    width: 100%;
+    color: lightgrey;
+    background-color: black;
+}
+
+footer {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+a:link {
+    color: black;
+}
+a:hover {
+    color: darkgreen;
+}
+
+a:visited {
+    color: darkgreen;
+}
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+

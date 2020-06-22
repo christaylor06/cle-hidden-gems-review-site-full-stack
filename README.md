@@ -1,2 +1,1 @@
-# ReviewSiteTwo
-# cle-hidden-gems-review-site-full-stack
+# ReviewSiteTwo - CLE Hidden-Gems-Review-Site-Full-Stack

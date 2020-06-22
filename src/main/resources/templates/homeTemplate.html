@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>CLE Wanderlust: Hidden Gems</title>
+    <link rel="stylesheet" type="text/css" href="./css/homestyle.css">
+</head>
+
+<body>
+<div class="fixed-header">
+    <header>
+        <h1>CLE WANDERLUST</h1>
+        <nav>
+            <p class="nav"> Home | About | Contact</p>
+        </nav>
+    </header>
+</div>
+<div class="container">
+       <div class="intro"> <h2>2020 Staycation Series: CLE Hidden Gems</h2>
+           <p><small>Publication Date: June 15, 2020 | Author: Chris Taylor</small></p>
+           <p>Few things bring the CLE Wanderlust team more joy than wandering off the beaten path in well-trodden cities. For
+            those of you keen to avoid tourist hot spots, we’ve rounded up some of the best hidden gems right here in our own
+            backyard.  From exploring the first indoor shopping center in America and finding a castle tucked away in the
+            woods, to unwinding in (arguably the coolest speakeasy bar) in the city, here are our top picks:</p>
+       </div>
+    <main>
+
+        <div class="reviews" th:each="review: ${reviewsModel}"><a th:href="@{/review(id=${review.id})}"> <img
+                th:src="${review.imageUrl}" > <div class="titles" th:text="${review.reviewTitle}"></div>
+        </a>
+
+
+
+        </div>
+    </main>
+
+</div>
+
+<div class="fixed-footer">
+    <small>&copy Chris Taylor 2020</small>
+</div>
+
+</body>
+
+</html>
