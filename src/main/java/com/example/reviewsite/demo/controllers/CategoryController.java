@@ -1,7 +1,7 @@
-package com.example.reviewsite.demo;
+package com.example.reviewsite.demo.controllers;
 
-import com.example.reviewsite.demo.Category;
-import com.example.reviewsite.demo.CategoryRepository;
+import com.example.reviewsite.demo.repositories.CategoryRepository;
+import com.example.reviewsite.demo.models.Category;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +24,7 @@ public class CategoryController {
 
     @GetMapping("/categories/{categoryName}")
     public String displaySingleCategory(@PathVariable String categoryName, Model model) {
-        Category retrievedCategory = categoryRepo.findCategoryByName(categoryName);
+        Category retrievedCategory = categoryRepo.findCategory(categoryName);
         model.addAttribute("category",retrievedCategory);
         return "categoryView";
     }

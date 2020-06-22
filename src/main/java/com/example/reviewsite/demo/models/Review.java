@@ -1,4 +1,4 @@
-package com.example.reviewsite.demo;
+package com.example.reviewsite.demo.models;
 
 import javax.persistence.*;
 import java.util.ArrayList;
