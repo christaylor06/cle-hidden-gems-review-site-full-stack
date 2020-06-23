@@ -16,15 +16,15 @@ public class CategoryController {
     @Resource
     private CategoryRepository categoryRepo;
 
-    @RequestMapping({"/categories", "category", })
-    public String displayCampuses(Model model){
+    @RequestMapping({"/categories", "/", "" })
+    public String displayCategories(Model model){
         model.addAttribute("categories", categoryRepo.findAll());
         return "categoriesView";
     }
 
     @GetMapping("/categories/{categoryName}")
     public String displaySingleCategory(@PathVariable String categoryName, Model model) {
-        Category retrievedCategory = categoryRepo.findCategory(categoryName);
+        Category retrievedCategory = categoryRepo.findCategoryByName(categoryName);
         model.addAttribute("category",retrievedCategory);
         return "categoryView";
     }

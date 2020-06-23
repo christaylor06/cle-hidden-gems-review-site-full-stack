@@ -1,6 +1,9 @@
 package com.example.reviewsite.demo.models;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -14,11 +17,11 @@ public class Category {
     @ManyToMany
     private Collection<Review> reviews;
 
-    protected Category(){}
+    public Category(){}
 
     public Category(String categoryName) {
         this.categoryName = categoryName;
-        this.reviews = reviews;
+//        this.reviews = reviews;
     }
 
     public Long getId() {
@@ -29,7 +32,6 @@ public class Category {
         return categoryName;
     }
     public Collection<Review> getReviews() {
-
         return reviews;
     }
 

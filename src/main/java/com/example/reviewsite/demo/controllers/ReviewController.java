@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 import java.util.Optional;
 
 @Controller
-public class ReviewsController {
+public class ReviewController {
 
     @Resource
     private ReviewRepository reviewRepo;
@@ -25,14 +25,14 @@ public class ReviewsController {
     }
 
     @RequestMapping("/reviews/{id}")
-    public String findOneReview(@PathVariable(value = "id") Long id, Model model) throws ReviewNotFoundException {
-
+    public String findOneReview(@PathVariable long id, Model model)  {
         Optional<Review> retrievedReview = reviewRepo.findById(id);
         Review foundReview = retrievedReview.get();
         model.addAttribute("reviewModel", foundReview);
         return "reviewTemplate";
 
-//        if(foundReview == null) {
+//       throws ReviewNotFoundException
+//       if(foundReview == null) {
 //            throw new ReviewNotFoundException();
 //        }
 

@@ -55,12 +55,13 @@ public class Review {
         return reviewContent;
     }
 
-//    public void setReviewContent(String reviewContent) {
+    //    public void setReviewContent(String reviewContent) {
 //        this.reviewContent = reviewContent;
 //    }
+    public Review() {
+    }
 
-
-    public Review(Long id, String reviewTitle, String imageUrl, String reviewContent, Category...categories) {
+    public Review(Long id, String reviewTitle, String imageUrl, String reviewContent, Category... categories) {
         this.id = id;
         this.reviewTitle = reviewTitle;
         this.imageUrl = imageUrl;
