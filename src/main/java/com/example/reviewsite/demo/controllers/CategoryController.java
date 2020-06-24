@@ -24,7 +24,7 @@ public class CategoryController {
 
     @GetMapping("/categories/{categoryName}")
     public String displaySingleCategory(@PathVariable String categoryName, Model model) {
-        Category retrievedCategory = categoryRepo.findCategoryByName(categoryName);
+        Category retrievedCategory = categoryRepo.findCategoryByCategoryName(categoryName);
         model.addAttribute("category",retrievedCategory);
         return "categoryView";
     }

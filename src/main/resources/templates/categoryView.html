@@ -12,8 +12,8 @@
 <body>
 <h1>Reviews by Category</h1>
 <ul>
-<li th:each="reviewTitle:${category.reviews}">
-    <a th:href="@{'/reviews/'+ ${category.categoryName}}" th:text="${category.categoryName}">Category</a>
+<li th:each="review:${category.reviews}">
+    <a th:href="@{'/reviews/'+ ${category.categoryName}}" th:text="${review.reviewTitle}">Category</a>
 </ul>
 
 

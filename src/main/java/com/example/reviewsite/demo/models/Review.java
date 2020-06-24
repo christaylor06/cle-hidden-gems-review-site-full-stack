@@ -16,7 +16,7 @@ public class Review {
     private String imageUrl;
     @Column(length = 3000)
     private String reviewContent;
-    @ManyToMany(mappedBy = "reviews")
+    @ManyToMany
     private Collection<Category> categories;
 
     public long getId() {

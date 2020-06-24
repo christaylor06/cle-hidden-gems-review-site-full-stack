@@ -14,7 +14,7 @@ public class Category {
     @GeneratedValue
     private Long id;
     private String categoryName;
-    @ManyToMany
+    @ManyToMany(mappedBy = "categories")
     private Collection<Review> reviews;
 
     public Category(){}
