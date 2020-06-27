@@ -19,45 +19,31 @@ public class Review {
     @ManyToMany
     private Collection<Category> categories;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-//    public void setId(long id) {
-//        this.id = id;
-//    }
 
     public String getReviewTitle() {
         return reviewTitle;
     }
 
-//    public void setReviewTitle(String reviewTitle) {
-//        this.reviewTitle = reviewTitle;
-//    }
 
     public String getImageUrl() {
         return imageUrl;
     }
 
-//    public void setImageUrl(String imageUrl) {
-//        this.imageUrl = imageUrl;
-//    }
 
     public Collection<Category> getReviewCategories() {
         return categories;
     }
 
-//    public void setCategory(String category) {
-//        this.category = category;
-//    }
 
     public String getReviewContent() {
         return reviewContent;
     }
 
-    //    public void setReviewContent(String reviewContent) {
-//        this.reviewContent = reviewContent;
-//    }
+
     public Review() {
     }
 

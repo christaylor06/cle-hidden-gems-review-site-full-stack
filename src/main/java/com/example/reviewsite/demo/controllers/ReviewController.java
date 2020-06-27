@@ -31,11 +31,7 @@ public class ReviewController {
         model.addAttribute("reviewModel", foundReview);
         return "reviewTemplate";
 
-//       throws ReviewNotFoundException
-//       if(foundReview == null) {
-//            throw new ReviewNotFoundException();
-//        }
 
     }
-//if(reviewRepo.findOneReview
+
 }

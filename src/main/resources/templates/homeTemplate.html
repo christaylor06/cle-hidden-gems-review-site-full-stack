@@ -25,11 +25,11 @@
        </div>
     <main>
 
-        <div class="reviews" th:each="review: ${reviewsModel}"><a th:href="@{/review(id=${review.id})}"> <img
+        <div class="reviews" th:each="review: ${reviewsModel}"><a th:href="@{'/reviews/' + ${review.id}}"> <img
                 th:src="${review.imageUrl}" > <div class="titles" th:text="${review.reviewTitle}"></div>
         </a>
 
-
+<!--            <a th:href="@{/review(id=${review.id})}">-->
 
         </div>
     </main>
